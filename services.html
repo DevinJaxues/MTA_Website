@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MTA CPAs is a full-service accounting firm providing tax planning, compliance, business advisory, and CFO services tailored to individuals and businesses. Experience trusted guidance with a modern approach." />
+  <title>Our Services | MTA CPAs</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/connecting-dots.js" defer></script>
+</head>
+<body>
+  <canvas class="connecting-dots"></canvas>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand-group">
+        <a class="brand mta" href="/">
+          <img src="images/MTA-Logo-v4-Extended-1.png" alt="Martin Tax & Advisory logo" />
+        </a>
+        <a class="brand accsub" href="https://accountingsubs.com" target="_blank" rel="noopener">
+          <img src="images/acc subs.png" alt="Accounting Subcontractors logo" />
+        </a>
+      </div>
+      <nav class="main-nav" aria-label="Primary">
+        <button class="hamburger" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="#bookkeeping">Bookkeeping</a></li>
+          <li><a href="#tax">Tax &amp; Payroll</a></li>
+          <li><a class="btn btn--solid" href="client-portal.html">Client Portal</a></li>
+        </ul>
+      </nav>
+    </div>
+    <nav id="mobileMenu" class="mobile-drawer" aria-label="Mobile">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#bookkeeping">Bookkeeping</a></li>
+        <li><a href="#tax">Tax &amp; Payroll</a></li>
+        <li><a href="client-portal.html">Client Portal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="services-hero">
+    <div class="wrap">
+      <h1>Our Services</h1>
+      <p class="subhead">At MTA CPA, we offer expert accounting, tax, advisory, and business services designed to help you grow with confidence.</p>
+    </div>
+  </section>
+
+  <!-- Service Cards -->
+    <section class="services-grid-section">
+    <div class="wrap services-grid">
+
+        <!-- Tax Compliance -->
+        <div class="service-card">
+        <img src="images/tax-comliance-b.png" alt="Tax Compliance" class="service-icon" />
+        <h2>Tax Compliance</h2>
+        <p class="short-desc">We ensure your filings are accurate, timely, and compliant with state and federal laws. Let us help you navigate audits, deadlines, and obligations so you can focus on what matters.</p>
+        <button class="modal-btn" data-modal="tax-compliance">Learn More</button>
+        </div>
+
+        <!-- Tax Planning -->
+        <div class="service-card">
+        <img src="images/tax-planning-b.png" alt="Tax Planning" class="service-icon" />
+        <h2>Tax Planning</h2>
+        <p class="short-desc">Proactive strategies to minimize taxes, optimize deductions, and align with your long‑term goals. We help you structure your finances for efficiency and growth.</p>
+        <button class="modal-btn" data-modal="tax-planning">Learn More</button>
+        </div>
+
+        <!-- Business Structure -->
+        <div class="service-card">
+        <img src="images/business-structure-new-business-set-up-b.png" alt="Business Structure & Setup" class="service-icon" />
+        <h2>Business Structure & Setup</h2>
+        <p class="short-desc">Choosing the right structure from day one is crucial. Whether you're forming an LLC, S‑Corp, or partnership, we’ll guide you through registration, regulation, tax implications, and long-term flexibility.</p>
+        <button class="modal-btn" data-modal="business-structure">Learn More</button>
+        </div>
+
+        <!-- Succession Planning -->
+        <div class="service-card">
+        <img src="images/business-succession-planning-b.png" alt="Business Succession Planning" class="service-icon" />
+        <h2>Business Succession Planning</h2>
+        <p class="short-desc">Preparing for the future means planning ahead. We’ll work with you on ownership transition, valuation, minimizing tax impact, and ensuring consistency in leadership.</p>
+        <button class="modal-btn" data-modal="succession">Learn More</button>
+        </div>
+
+        <!-- CFO/CEO Consulting -->
+        <div class="service-card">
+        <img src="images/cfo-ceo-consulting-and-support-b.png" alt="CFO/CEO Consulting" class="service-icon" />
+        <h2>CFO/CEO Consulting</h2>
+        <p class="short-desc">Executives need more than reports — they need insights. Our CFO and CEO consulting services provide high-level strategic support tailored to your industry and stage of growth. We assist with budgeting, forecasting, cash flow management, and long-term financial planning. Whether acting as a fractional CFO or supporting an internal leadership team, our expertise helps drive profitability, streamline operations, and inform executive decisions with clarity and confidence.</p>
+        <button class="modal-btn" data-modal="cfo-consulting">Learn More</button>
+        </div>
+
+        <!-- QuickBooks -->
+        <div class="service-card">
+        <img src="images/quickbooks-setup-and-consulting-b.png" alt="QuickBooks Consulting" class="service-icon" />
+        <h2>QuickBooks Setup & Consulting</h2>
+        <p class="short-desc">Clean books start with a proper setup. We make it easy.</p>
+        <button class="modal-btn" data-modal="quickbooks">Learn More</button>
+        </div>
+
+        <!-- Bookkeeping & Payroll -->
+        <div class="service-card">
+        <img src="images/bookkepping-and-payroll-services-b.png" alt="Bookkeeping & Payroll" class="service-icon" />
+        <h2>Bookkeeping & Payroll Services</h2>
+        <p class="short-desc">Stay organized, stay compliant — without the stress.</p>
+        <button class="modal-btn" data-modal="payroll">Learn More</button>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="services-cta wrap">
+    <h2>Ready to get started?</h2>
+    <a href="/contact" class="btn btn-primary">Schedule a Consultation</a>
+    </section>
+
+    <!-- Modals Container -->
+    <div id="modals">
+    <!-- Modal Template -->
+    <div class="modal" id="modal-tax-compliance">
+        <div class="modal-content">
+        <button class="close-modal">×</button>
+        <h2>Tax Compliance</h2>
+        <p><strong>Why It Matters:</strong> Tax compliance isn’t just about filing on time — it’s about reducing risk. Inaccurate or late filings can lead to IRS scrutiny, penalties, and audits that disrupt your business or personal finances. A professional tax compliance partner ensures your obligations are met accurately, on time, and with confidence.</p>
+        <p><strong>What We Do:</strong> We manage the full tax filing lifecycle, including preparation of federal, state, and local returns for individuals, businesses, estates, and trusts. Our team tracks changing tax laws to ensure every deduction and credit is properly applied. We also offer year-end reporting, estimated payments, and representation for audits, all while maintaining clean records and documentation.</p>
+        <p><strong>Benefits:</strong> Peace of mind, reduced audit risk, and confidence that your returns are fully compliant with current tax law.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-tax-planning">
+        <div class="modal-content">
+        <button class="close-modal">×</button>
+        <h2>Tax Planning</h2>
+        <p><strong>Why It Matters:</strong> Without strategic tax planning, you could be leaving thousands of dollars on the table. The tax code is designed with incentives — but only if you plan ahead. Proactive planning reduces your liability, eliminates surprises at tax time, and aligns your strategy with both short and long-term financial goals.</p>
+        <p><strong>What We Do:</strong> We build personalized tax strategies for both individuals and businesses. This includes quarterly check-ins, income timing, deductions optimization, retirement contribution planning, entity structure evaluation, and tax-loss harvesting.</p>
+        <p><strong>Benefits:</strong> Reduced tax liability, optimized cash flow, and a proactive approach that prevents end-of-year stress.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-business-structure">
+        <div class="modal-content">
+        <button class="close-modal">×</button>
+        <h2>Business Structure & Setup</h2>
+        <p><strong>Why It Matters:</strong> Your business entity affects everything — your tax rate, liability, how you get paid, and future expansion. Choosing incorrectly at the start can limit growth or create unnecessary risk.</p>
+        <p><strong>What We Do:</strong> We guide you through choosing between LLCs, S-Corps, C-Corps, partnerships, and sole proprietorships. We handle state registration, EIN acquisition, tax elections, and help with payroll and accounting setup.</p>
+        <p><strong>Benefits:</strong> Reduced liability, maximized tax efficiency, and a streamlined launch.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-succession">
+        <div class="modal-content">
+        <button class="close-modal">×</button>
+        <h2>Business Succession Planning</h2>
+        <p><strong>Why It Matters:</strong> Without a succession plan, even a thriving business can collapse. Whether transitioning to family, partners, or a buyer, clear planning preserves value and ensures operations continue smoothly.</p>
+        <p><strong>What We Do:</strong> We assist with valuations, ownership transfer, buy-sell agreements, estate planning, and tax planning to help transition business leadership securely.</p>
+        <p><strong>Benefits:</strong> Minimized tax liability, preserved legacy, and smoother transitions.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-cfo-consulting">
+        <div class="modal-content">
+        <button class="close-modal">×</button>
+        <h2>CFO/CEO Consulting</h2>
+        <p><strong>Why It Matters:</strong> Financial decisions drive growth, but many companies can’t justify a full-time CFO. With fractional consulting, you gain strategic insight at a fraction of the cost.</p>
+        <p><strong>What We Do:</strong> Forecasting, budgeting, profitability analysis, cash flow planning, and executive-level strategy — without hiring in-house.</p>
+        <p><strong>Benefits:</strong> Data-driven growth, better pricing models, and improved decision-making.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-quickbooks">
+        <div class="modal-content">
+        <button class="close-modal">×</button>
+        <h2>QuickBooks Setup & Consulting</h2>
+        <p><strong>Why It Matters:</strong> Poor bookkeeping setup leads to constant errors. QuickBooks done right saves hours and headaches later.</p>
+        <p><strong>What We Do:</strong> Initial setup, chart of accounts, integrations, data migration, cleanup, and ongoing support.</p>
+        <p><strong>Benefits:</strong> Accurate financials, faster closings, and clean records year-round.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-payroll">
+        <div class="modal-content">
+        <button class="close-modal">×</button>
+        <h2>Bookkeeping & Payroll</h2>
+        <p><strong>Why It Matters:</strong> Accurate books and timely payroll are essential to compliance, employee satisfaction, and clean tax filings.</p>
+        <p><strong>What We Do:</strong> Full-cycle bookkeeping, payroll runs, tax filings, reconciliations, and reporting.</p>
+        <p><strong>Benefits:</strong> On-time paychecks, reliable books, and audit-proof records.</p>
+        </div>
+    </div>
+    </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> Martin Tax & Advisory</p>
+      <nav aria-label="Footer">
+        <a href="faq.html">FAQ</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
