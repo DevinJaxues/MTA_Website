@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact • Martin Tax & Advisory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact Martin Tax & Advisory for tax, bookkeeping, payroll, and advisory services. Let's talk about your business goals." />
+
+  <!-- Font & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Connecting dots canvas (background) -->
+  <canvas class="connecting-dots" aria-hidden="true"></canvas>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand-group">
+    <a class="brand mta" href="/">
+      <img src="images/MTA-Logo-v4-Extended-1.png" alt="Martin Tax & Advisory logo" />
+    </a>
+    <a class="brand accsub" href="https://accountingsubs.com" target="_blank" rel="noopener">
+      <img src="images/acc subs.png" alt="Accounting Subcontractors logo" />
+    </a>
+    </div>
+
+      <nav class="main-nav" aria-label="Primary">
+        <button class="hamburger" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">Meet The Team</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a class="btn btn--solid" href="client-portal.html">Client Portal</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Mobile drawer -->
+    <nav id="mobileMenu" class="mobile-drawer" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">Meet The Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="client-portal.html">Client Portal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="contact-hero">
+    <div class="wrap contact-hero__inner">
+      <h1>Let’s Talk</h1>
+      <p>Tell us about your business—tax, bookkeeping, payroll, or advisory. We’ll reach out with next steps.</p>
+    </div>
+  </section>
+
+  <!-- Contact Grid -->
+  <section class="contact-grid section">
+    <div class="wrap contact-grid__inner">
+      <!-- Form Card -->
+      <article class="contact-card contact-card--form">
+        <h2>Send Us a Message</h2>
+        <!-- Replace action with your Formspree/endpoint -->
+        <form class="contact-form" action="https://formspree.io/f/xqallwnl" method="POST">
+          <div class="form-row">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" required placeholder="Jane Doe" />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@company.com" />
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" />
+          </div>
+
+          <div class="form-row">
+            <label for="service">What do you need help with?</label>
+            <select id="service" name="service">
+              <option value="tax">Tax</option>
+              <option value="bookkeeping">Bookkeeping</option>
+              <option value="payroll">Payroll</option>
+              <option value="advisory">Advisory</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Tell us a bit more</label>
+            <textarea id="message" name="message" rows="5" placeholder="Short description of your business needs…"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--solid">Submit</button>
+          <p class="fineprint">By submitting, you agree to be contacted about services. We respect your privacy.</p>
+        </form>
+      </article>
+
+      <!-- Info Card -->
+      <aside class="contact-card contact-card--info">
+        <h2>Contact Details</h2>
+        <ul class="contact-list">
+          <li><strong>Email:</strong> <a href="mailto:tax@mta.cpa">tax@mta.cpa</a></li>
+          <li><strong>Phone:</strong> <a href="tel:+14354651040">(435) 465-1040</a></li>
+          <li><strong>Office:</strong> 2901 W Bluegrass Blvd, Ste 200 Lehi, UT 84043</li>
+          <li><strong>Hours:</strong> Mon–Fri, 9:00 AM–5:00 PM</li>
+        </ul>
+
+        <div class="map-wrap">
+          <!-- Optional map embed (replace src with your map link or remove) -->
+          <iframe title="Office Location" width="100%" height="420" style="border:0;" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=2901%20W%20Bluegrass%20Blvd%20Ste%20200%20Lehi%20UT%2084043&amp;output=embed" spellcheck="false" aria-label="To enrich screen reader interactions, please activate Accessibility in Grammarly extension settings">
+          </iframe>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> Martin Tax & Advisory</p>
+      <nav aria-label="Footer">
+        <a href="faq.html" class="btn-link">FAQ</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Your existing JS (kept same path) -->
+    <!-- Your existing JS -->
+  <script src="/js/main.js" defer></script>
+  <script src="js/connecting-dots.js" defer></script>
+
+</body>
+</html>
