@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Martin Tax & Advisory</title>
+  <title>FAQ • Martin Tax & Advisory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="MTA CPAs is a full-service accounting firm providing tax planning, compliance, business advisory, and CFO services tailored to individuals and businesses. 35+ years of experience in taxes, CFO, bookkeeping, payroll and more.">
+  <meta name="description" content="Find answers to common questions about small business accounting, payroll, and tax compliance. Clear guidance to help you stay organized and stress-free." />
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,15 +13,19 @@
   <!-- App CSS (path corrected to your current file layout) -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="faq-page">
+<!-- THIS CODE IS PROPERTY OF DEVIN J. MONSEN. ANY UNCONSENTED REDISTRIBUTION OR USE OF THIS CODE IS UNLAWFUL UNDER COPYRIGHT LAW -->
+<body class="mta-site">
     <canvas class="connecting-dots"></canvas>
   <!-- Header -->
   <header class="site-header">
   <div class="wrap header-inner">
     <div class="brand-group">
-      <a class="brand" href="index.html">
-        <img src="images/MTA-Logo-v4-Extended-1.png" alt="MTA logo">
-      </a>
+    <a class="brand mta" href="/">
+      <img src="images/MTA-Logo-v4-Extended-1.png" alt="Martin Tax & Advisory logo" />
+    </a>
+    <a class="brand accsub" href="https://accountingsubs.com" target="_blank" rel="noopener">
+      <img src="images/acc subs.png" alt="Accounting Subcontractors logo" />
+    </a>
     </div>
     <nav class="main-nav" aria-label="Primary">
         <button class="hamburger" aria-expanded="false" aria-controls="mobileMenu">
@@ -160,31 +164,5 @@
   <!-- App JS -->
   <script src="js/connecting-dots.js"></script>
   <script src="js/main.js" defer></script>
-  <script>
-      var copy = document.querySelector(".logos-slide").cloneNode(true);
-      document.querySelector(".logos").appendChild(copy);
-    </script>
-
-
-  <script>
-    document.querySelectorAll(".faq-question").forEach((question) => {
-      question.addEventListener("click", () => {
-        const parent = question.closest(".faq-item");
-        parent.classList.toggle("open");
-        document.querySelectorAll(".faq-item").forEach((item) => {
-          if (item !== parent) item.classList.remove("open");
-        });
-      });
-    });
-
-    const searchInput = document.getElementById("faqSearch");
-    searchInput.addEventListener("input", () => {
-      const filter = searchInput.value.toLowerCase();
-      document.querySelectorAll(".faq-item").forEach((item) => {
-        const text = item.textContent.toLowerCase();
-        item.style.display = text.includes(filter) ? "" : "none";
-      });
-    });
-  </script>
 </body>
 </html>

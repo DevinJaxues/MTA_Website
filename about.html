@@ -1,22 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Meet The Team • Martin Tax & Advisory</title>
+  <meta name="description" content="Meet the Martin Tax & Advisory team. Experienced professionals dedicated to helping businesses with tax strategy, accounting, and payroll solutions." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="about-page">
+<!-- THIS CODE IS PROPERTY OF DEVIN J. MONSEN. ANY UNCONSENTED REDISTRIBUTION OR USE OF THIS CODE IS UNLAWFUL UNDER COPYRIGHT LAW -->
+<body class="mta-site">
   <canvas class="connecting-dots"></canvas>
 
   <!-- Header -->
   <header class="site-header">
   <div class="wrap header-inner">
     <div class="brand-group">
-      <a class="brand" href="index.html">
-        <img src="images/MTA-Logo-v4-Extended-1.png" alt="MTA logo">
-      </a>
+    <a class="brand mta" href="/">
+      <img src="images/MTA-Logo-v4-Extended-1.png" alt="Martin Tax & Advisory logo" loading="lazy"/>
+    </a>
+    <a class="brand accsub" href="https://accountingsubs.com" target="_blank" rel="noopener">
+      <img src="images/acc subs.png" alt="Accounting Subcontractors logo" loading="lazy"/>
+    </a>
     </div>
     <nav class="main-nav" aria-label="Primary">
         <button class="hamburger" aria-expanded="false" aria-controls="mobileMenu">
@@ -49,9 +53,9 @@
   <!-- Hero Section -->
   <section class="hero hero--team">
       <div class="hero-images">
-        <img src="images/brobroandbra.webp" alt="Team working together">
-        <img src="images/team.webp" alt="Office collaboration">
-        <img src="images/troyandbrady.webp" alt="Business strategy">
+        <img src="images/brobroandbra.webp" alt="Team working together" loading="lazy">
+        <img src="images/team.webp" alt="Office collaboration" loading="lazy">
+        <img src="images/troyandbrady.webp" alt="Business strategy" loading="lazy">
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-text">
@@ -66,7 +70,7 @@
 
         <!-- Troy Martin -->
         <div class="team-card">
-          <img src="images/troy.webp" alt="Troy Martin" class="team-photo" />
+          <img src="images/troy.webp" alt="Troy Martin" class="team-photo" loading="lazy"/>
           <h3 class="team-name">Troy Martin</h3>
           <p class="team-role">Founder & CPA</p>
           <div class="team-bio">
@@ -81,13 +85,13 @@
                 <p>Beyond his role at Martin Tax & Advisory, Troy is owner of several other business ventures including; Elite Esthetics Academy, (an esthetics school and med spa in Draper Utah) and Renegade Rentals, (an equipment rental company) with multiple locations in Utah. This entrepreneurial perspective allows him to connect with business owners not just as an advisor, but as a fellow operator who understands what it takes to scale and sustain a business.</p>
                 <p>When he’s not advising clients, Troy embraces a life of adventure—whether it’s on a Harley Davidson, a dirt bike, or exploring the outdoors through fly fishing, diving, playing golf with family and friends, and traveling. His drive for new experiences mirrors his professional philosophy: growth comes from embracing challenges and pursuing opportunities with purpose.</p>
             </div>
-            <button class="bio-toggle">Read more</button>
+            <button class="bio-toggle" aria-expanded="false">Read more</button>
           </div>
         </div>
 
         <!-- Team Member 2 -->
         <div class="team-card">
-          <img src="images/brady.webp" alt="Jane Doe" class="team-photo" />
+          <img src="images/brady.webp" alt="Jane Doe" class="team-photo" loading="lazy"/>
           <h3 class="team-name">Brady Martin</h3>
           <p class="team-role">Certified Public Accountant (CPA)</p>
           <div class="team-bio">
@@ -101,7 +105,7 @@
 
         <!-- Team Member 3 -->
         <div class="team-card">
-          <img src="images/brodie.webp" alt="John Smith" class="team-photo" />
+          <img src="images/brodie.webp" alt="John Smith" class="team-photo" loading="lazy"/>
           <h3 class="team-name">Bordie Martin</h3>
           <p class="team-role">Senior Tax Advisor</p>
           <div class="team-bio">
@@ -115,7 +119,7 @@
 
         <!-- Team Member 4 -->
         <div class="team-card">
-          <img src="images/brock.webp" alt="Lisa Allen" class="team-photo" />
+          <img src="images/brock.webp" alt="Lisa Allen" class="team-photo" loading="lazy"/>
           <h3 class="team-name">Brock Jones</h3>
           <p class="team-role">Certified Public Accountant (CPA)</p>
           <div class="team-bio">
@@ -129,7 +133,7 @@
 
         <!-- Team Member 4 -->
         <div class="team-card">
-          <img src="images/devin.webp" alt="Devin Monsen" class="team-photo" />
+          <img src="images/devin.webp" alt="Devin Monsen" class="team-photo" loading="lazy"/>
           <h3 class="team-name">Devin Monsen</h3>
           <p class="team-role">Certified Bookkeeper and QB Pro Advisor</p>
           <div class="team-bio">
@@ -143,7 +147,7 @@
 
         <!-- Team Member 5 -->
         <div class="team-card">
-          <img src="images/filler.webp" alt="Katie Hicks" class="team-photo" />
+          <img src="images/filler.webp" alt="Katie Hicks" class="team-photo" loading="lazy"/>
           <h3 class="team-name">Katie Hicks</h3>
           <p class="team-role">Administrative Assistant</p>
           <div class="team-bio">
@@ -171,14 +175,5 @@
 
   <script src="js/main.js"></script>
   <script src="js/connecting-dots.js"></script>
-  <script>
-  document.querySelectorAll('.bio-toggle').forEach((button) => {
-    button.addEventListener('click', () => {
-      const bio = button.closest('.team-bio');
-      bio.classList.toggle('open');
-      button.textContent = bio.classList.contains('open') ? 'Show less' : 'Read more';
-    });
-  });
-</script>
 </body>
 </html>

@@ -52,6 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Responsive particle count
+  function getParticleCount() {
+    return window.innerWidth <= 768 ? 40 : 100;
+  }
+
   function connectParticles() {
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
@@ -103,6 +108,13 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(animate);
   }
 
-  initParticles();
+  // Initialize responsive particle count
+  initParticles(getParticleCount());
   animate();
+
+  // Re-init on resize
+  window.addEventListener("resize", () => {
+    resizeCanvas();
+    initParticles(getParticleCount());
+  });
 });

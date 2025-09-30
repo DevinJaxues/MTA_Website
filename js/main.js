@@ -1,3 +1,5 @@
+/* ====== This code is property of Devin J. Monsen any unconsented redistribution or use of this code is unlawful under copyright law. ====== */
+
 /* ====== Mobile Nav Toggle ====== */
 const hamburger = document.querySelector('.hamburger');
 const drawer = document.getElementById('mobileMenu');
@@ -13,14 +15,12 @@ if (hamburger && drawer) {
 const y = document.getElementById('year');
 if (y) y.textContent = new Date().getFullYear();
 
-/* ====== Marquee Infinite Scroll (Working Version) ====== */
+/* ====== Marquee Infinite Scroll ====== */
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById("marqueeTrack");
   if (!track) return;
 
   const logos = Array.from(track.children);
-
-  // Clone all logos once for seamless loop
   logos.forEach(logo => {
     const clone = logo.cloneNode(true);
     clone.setAttribute("aria-hidden", "true");
@@ -32,30 +32,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function animate() {
     x -= speed;
-
-    // Reset after first full group (not full scrollWidth!)
     const resetPoint = track.scrollWidth / 2;
     if (Math.abs(x) >= resetPoint) {
       x = 0;
     }
-
     track.style.transform = `translateX(${x}px)`;
     requestAnimationFrame(animate);
   }
 
   animate();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const expandButtons = document.querySelectorAll('.expand-btn');
-
-  expandButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const card = btn.closest('.service-card');
-      card.classList.toggle('expanded');
-      btn.textContent = card.classList.contains('expanded') ? 'Show Less' : 'Show More';
-    });
-  });
 });
 
 // === Modal Toggle Logic ===
@@ -90,3 +75,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+document.querySelectorAll(".faq-question").forEach((question) => {
+      question.addEventListener("click", () => {
+        const parent = question.closest(".faq-item");
+        parent.classList.toggle("open");
+        document.querySelectorAll(".faq-item").forEach((item) => {
+          if (item !== parent) item.classList.remove("open");
+        });
+      });
+    });
+
+    const searchInput = document.getElementById("faqSearch");
+    searchInput.addEventListener("input", () => {
+      const filter = searchInput.value.toLowerCase();
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(filter) ? "" : "none";
+      });
+});
+
+document.querySelectorAll('.bio-toggle').forEach((button) => {
+    button.addEventListener('click', () => {
+      const bio = button.closest('.team-bio');
+      bio.classList.toggle('open');
+      button.textContent = bio.classList.contains('open') ? 'Show less' : 'Read more';
+    });
+});
+/* ====== This code is property of Devin J. Monsen any unconsented redistribution or use of this code is unlawful under copyright law. ====== */

@@ -1,4 +1,8 @@
 /* ==============================
+   This code is property of Devin J. Monsen any unconsented redistribution or use of this code is unlawful under copyright law.
+   ============================== */
+
+/* ==============================
    Minimal reset + base
    ============================== */
 *,*::before,*::after { box-sizing: border-box; }
@@ -15,7 +19,6 @@ body {
   z-index: 0;
 }
 
-/* Let body text default to dark for readability on white */
 body{
   font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color:#0f1113;
@@ -28,7 +31,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; background: none; border: 0; }
 
-/* --- Theme tokens (kept from your file) --- */
+/* --- Theme tokens  --- */
 :root{
   --brand-brown:#3a2a22;
   --brand-red:#d80000;
@@ -65,7 +68,7 @@ button { font: inherit; background: none; border: 0; }
 .site-header .wrap{ width:100%; margin-inline:0; }
 
 .header-inner{ display:flex; align-items:center; justify-content:flex-start; gap: 1rem; padding: 14px 0; }
-.brand img{ height: 38px; width: auto; display:block; }
+
 
 .main-nav{ display:flex; align-items:center; gap: 1rem; }
 .nav-list{ display:flex; align-items:center; gap: clamp(16px, 3vw, 36px); }
@@ -382,11 +385,6 @@ SERVICES PAGE STYLES
   padding: 4rem 0;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
 
 .service-card {
   background-color: white;
@@ -701,13 +699,13 @@ SERVICES PAGE STYLES
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-  border-color: rgba(216,0,0,0.65);                 /* brand red focus */
+  border-color: var(--brand-red);                 
   box-shadow: 0 0 0 3px rgba(216,0,0,0.20);
   background: rgba(255,255,255,0.12);
 }
 
 .contact-form .btn.btn--solid {
-  background: #d80000;                              /* MTA red */
+  background: var(--brand-red);                             
   color: #fff;
 }
 .contact-form .btn.btn--solid:hover {
@@ -843,8 +841,8 @@ SERVICES PAGE STYLES
 
 .team-photo {
   width: 100%;
-  height: 300px;       /* fixed height for all photos */
-  object-fit: cover;   /* crop edges, no distortion */
+  height: 300px;       
+  object-fit: cover;   
   border-radius: 12px;
   margin-bottom: 16px;
   display: block;
@@ -897,7 +895,7 @@ SERVICES PAGE STYLES
 }
 
 .team-bio.open .bio-full {
-  max-height: 5000px; /* big enough to fit long bios */
+  max-height: 5000px; /* bio length for team members */
 }
 
 .bio-toggle {
@@ -931,11 +929,7 @@ SERVICES PAGE STYLES
   margin-top: 0;
 }
 
-.hero--team .hero-images {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
+
 
 .hero--team .hero-images img {
   width: 33.333%;
@@ -944,7 +938,7 @@ SERVICES PAGE STYLES
 }
 
 .hero--team .hero-images {
-  position: relative; /* so overlay stays bound */
+  position: relative; /* binds overlay to photo region */
   display: flex;
   width: 100%;
   height: 100%;
@@ -979,4 +973,51 @@ SERVICES PAGE STYLES
 .hero--team .hero-text h1,
 .hero--team .hero-text p {
   color: #fff !important;
+}
+
+/* === Header Brand Logo Interactivity === */
+.brand img {
+  transition: filter 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+/* Default: both logos full color */
+.brand img {
+  filter: none;
+  opacity: 1;
+}
+
+/* On the MTA site, make Acc Subs logo grayscale */
+body.mta-site .brand.accsub img {
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+/* On the Acc Subs site, make MTA logo grayscale */
+body.accsub-site .brand.mta img {
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+/* Hover: restore full color */
+.brand img:hover {
+  filter: none !important;
+  opacity: 1 !important;
+  cursor: pointer;
+}
+
+/* Force service cards to stack one per row on small screens */
+@media (max-width: 768px) {
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 20px; /* adjust spacing between stacked cards */
+    overflow-x: hidden; /* prevent any horizontal scroll */
+  }
+
+
+
+/* ==============================
+   This code is property of Devin J. Monsen any unconsented redistribution or use of this code is unlawful under copyright law.
+   ============================== */
 }
