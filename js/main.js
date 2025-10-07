@@ -75,30 +75,42 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-document.querySelectorAll(".faq-question").forEach((question) => {
-      question.addEventListener("click", () => {
-        const parent = question.closest(".faq-item");
-        parent.classList.toggle("open");
-        document.querySelectorAll(".faq-item").forEach((item) => {
-          if (item !== parent) item.classList.remove("open");
-        });
+
+// === FAQ Toggle Logic ===
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".faq-question").forEach((question) => {
+    question.addEventListener("click", () => {
+      const parent = question.closest(".faq-item");
+      parent.classList.toggle("open");
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        if (item !== parent) item.classList.remove("open");
       });
     });
+  });
 
-    const searchInput = document.getElementById("faqSearch");
+  const searchInput = document.getElementById("faqSearch");
+  if (searchInput) {
     searchInput.addEventListener("input", () => {
       const filter = searchInput.value.toLowerCase();
       document.querySelectorAll(".faq-item").forEach((item) => {
         const text = item.textContent.toLowerCase();
         item.style.display = text.includes(filter) ? "" : "none";
       });
+    });
+  }
 });
 
-document.querySelectorAll('.bio-toggle').forEach((button) => {
-    button.addEventListener('click', () => {
-      const bio = button.closest('.team-bio');
-      bio.classList.toggle('open');
-      button.textContent = bio.classList.contains('open') ? 'Show less' : 'Read more';
+// === Bio Toggle Logic ===
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".bio-toggle").forEach((button) => {
+    button.addEventListener("click", () => {
+      const bio = button.closest(".team-bio");
+      const isOpen = bio.classList.toggle("open");
+      button.textContent = isOpen ? "Show less" : "Read more";
+      button.setAttribute("aria-expanded", String(isOpen));
     });
+  });
 });
+
+
 /* ====== This code is property of Devin J. Monsen any unconsented redistribution or use of this code is unlawful under copyright law. ====== */

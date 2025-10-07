@@ -119,12 +119,12 @@ button { font: inherit; background: none; border: 0; }
 /* Logo sizing */
 .brand-group .brand img {
   display: block;
-  height: 48px;         /* MTA default height */
+  height: 58px;         /* MTA default height */
 }
 
 /* Acc Subs logo */
 .brand-group .accsub img {
-  height: 68px;
+  height: 78px;
   opacity: 0.95;
 }
 
@@ -203,6 +203,28 @@ button { font: inherit; background: none; border: 0; }
   100% {
     transform: translateX(-50%);
   }
+}
+
+/* === Trusted By (Marquee Title) === */
+.marquee-title {
+  text-align: center;
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 700;
+  color: var(--brand-brown);
+  letter-spacing: 0.4px;
+  margin-bottom: 36px;
+  position: relative;
+}
+
+.marquee-title::after {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 3px;
+  background-color: var(--brand-red);
+  margin: 2px auto 0 auto;
+  border-radius: 3px;
+  opacity: 0.9;
 }
 
 /* Media Queries */
@@ -872,19 +894,9 @@ SERVICES PAGE STYLES
   margin-bottom: 12px;
 }
 
-.bio-toggle {
-  background-color: var(--sage-green, #5a775f);
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 0.9rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
 .bio-toggle:hover {
-  background-color: #4c6652;
+  background-color: var(--brand-brown);
 }
 
 /* Team Bio Expandable Toggle */
@@ -899,7 +911,7 @@ SERVICES PAGE STYLES
 }
 
 .bio-toggle {
-  background-color: var(--sage-green, #5a775f);
+  background-color: var(--brand-red);
   color: white;
   border: none;
   padding: 8px 16px;
@@ -907,10 +919,6 @@ SERVICES PAGE STYLES
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-.bio-toggle:hover {
-  background-color: #4c6652;
 }
 
 .hero--team {
