@@ -1029,3 +1029,18 @@ body.accsub-site .brand.mta img {
    This code is property of Devin J. Monsen any unconsented redistribution or use of this code is unlawful under copyright law.
    ============================== */
 }
+
+
+/* === Background MTA Logo Behind Canvas === */
+body.mta-site::before {
+  content: "";
+  filter: none !important;  /* ensure no filter is applied */
+  position: fixed;
+  inset: 0;
+  background: url("/images/mtalogo.png") center center no-repeat;
+  background-size: 90vw;          /* adjust size as needed */
+  opacity: 0.5;                  /* subtle ghosted logo */
+  filter: grayscale(100%) brightness(1.1);
+  z-index: -2;                    /* sits behind connecting dots canvas */
+  pointer-events: none;
+}
