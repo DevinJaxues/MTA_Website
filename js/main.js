@@ -112,5 +112,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Set CSS var to exact header height so hero can be 100vh minus header
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+
+  const setHeaderVar = () => {
+    const h = header.offsetHeight || 88;
+    document.documentElement.style.setProperty('--header-h', `${h}px`);
+  };
+
+  setHeaderVar();
+  window.addEventListener('resize', setHeaderVar);
+});
 
 /* ====== This code is property of Devin J. Monsen any unconsented redistribution or use of this code is unlawful under copyright law. ====== */
