@@ -3,7 +3,7 @@ import { resolve } from "path";
 
 export default defineConfig({
   // IMPORTANT: repo name because you're deploying to /MTA_Website/
-  base: "/MTA_Website/",
+  base: "/",
 
   build: {
     rollupOptions: {
