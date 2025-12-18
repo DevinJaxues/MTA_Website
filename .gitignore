@@ -10,7 +10,6 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -181,5 +180,4 @@ cython_debug/
 .cursorindexingignore
 
 node_modules
-dist
 .DS_Storenode_modules
