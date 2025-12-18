@@ -1,177 +1,456 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Contact • Martin Tax & Advisory</title>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Contact Martin Tax & Advisory for tax, bookkeeping, payroll, and advisory services. Let's talk about your business goals." />
 
-  <!-- Font & CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>Contact Martin Tax & Advisory | Free Consultation</title>
+  <meta
+    name="description"
+    content="Contact Martin Tax & Advisory for a free consultation. Call, email, or visit our Lehi, Utah office. Custom-fit pricing designed around your needs."
+  />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact Martin Tax & Advisory | Free Consultation" />
+  <meta property="og:description" content="Call, email, or visit. Get a free consultation and custom-fit pricing designed around your needs." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="css/styles.css"/>
+
+  <!-- LocalBusiness schema (helps SEO + trust) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "Martin Tax & Advisory",
+    "url": "https://mta.cpa/",
+    "telephone": "+1-435-465-1040",
+    "email": "tax@mta.cpa",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2901 Bluegrass Blvd Suite 200-58",
+      "addressLocality": "Lehi",
+      "addressRegion": "UT",
+      "postalCode": "84043",
+      "addressCountry": "US"
+    }
+  }
+  </script>
 </head>
-<!-- THIS CODE IS PROPERTY OF DEVIN J. MONSEN. ANY UNCONSENTED REDISTRIBUTION OR USE OF THIS CODE IS UNLAWFUL UNDER COPYRIGHT LAW -->
-<body class="mta-site">
-  <!-- Connecting dots canvas (background) -->
-  <canvas class="connecting-dots" aria-hidden="true"></canvas>
+
+<body class="font-sans antialiased text-neutral-900">
 
   <!-- Header -->
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <div class="brand-group">
-    <a class="brand mta" href="https://devinjaxues.github.io/MTA_Website/index.html">
-      <img src="images/MTA-Logo-v4-Extended-1.png" alt="Martin Tax & Advisory logo" />
-    </a>
-    <a class="brand accsub" href="https://accountingsubs.com" target="_blank" rel="noopener">
-      <img src="images/acc subs.png" alt="Accounting Subcontractors logo" />
-    </a>
-    </div>
+    <header class="site-header z-50 bg-white/85 backdrop-blur border-b border-black/5">
+        <div class="header-bar flex h-[84px] md:h-[96px] items-center justify-between px-4 md:px-10 lg:px-14">
 
-      <nav class="main-nav" aria-label="Primary">
-        <button class="hamburger" aria-expanded="false" aria-controls="mobileMenu">
-          <span></span><span></span><span></span>
-          <span class="sr-only">Menu</span>
+        <!-- Left: Logo -->
+        <div class="header-brand-links flex items-center gap-4">
+            <a href="/" class="brand-link-icon" aria-label="Visit Martin Tax & Advisory">
+            <img
+                src="/images/mtalogo.png"
+                alt="Martin Tax & Advisory"
+                class="h-9 md:h-11 w-auto"
+            />
+            </a>
+            <a href="https://accsubs.com" target="_blank" rel="noreferrer" class="brand-link-icon" aria-label="Visit ACC Subsidiary">
+            <img src="/images/acc subs.png" alt="ACC Subsidiary" class="h-10 md:h-12 w-auto">
+            </a>
+        </div>
+
+        <button
+            class="mobile-nav-toggle lg:hidden"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            data-mobile-toggle
+        >
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
 
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">Meet The Team</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a class="btn btn--solid" href="client-portal.html">Client Portal</a></li>
-        </ul>
-      </nav>
-    </div>
+        <!-- Right: Nav -->
+        <nav class="nav-main hidden lg:flex items-center gap-5 md:gap-8 text-lg font-semibold">
+            <!-- Services + mega menu -->
+            <div class="relative nav-dropdown" data-mega>
+            <button
+                type="button"
+                class="nav-link nav-link-text nav-link-trigger inline-flex items-center gap-2 text-brand-black hover:text-brand-red"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="services-menu"
+                data-mega-trigger
+            >
+                Services
+                <span class="nav-link-indicator" aria-hidden="true">▾</span>
+            </button>
 
-    <!-- Mobile drawer -->
-    <nav id="mobileMenu" class="mobile-drawer" aria-label="Mobile">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">Meet The Team</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="https://martintaxadvisory.clientportal.com/#/login">Client Portal</a></li>
-      </ul>
-    </nav>
-  </header>
+            <!-- Mega menu -->
+            <div
+                id="services-menu"
+                class="mega-menu absolute left-1/2 top-full z-40 mt-7 rounded-3xl bg-white shadow-2xl ring-1 ring-black/5"
+                data-mega-panel
+            >
+                <div class="grid grid-cols-3 gap-8 text-left">
+                <!-- Column 1 -->
+                <div>
+                    <p class="mega-label font-semibold tracking-[0.3em] text-neutral-500 uppercase mb-4">
+                    Accounting
+                    </p>
+                    <ul class="space-y-2">
+                    <li class="mega-item">
+                        <a href="outsourced-accounting.html" class="mega-link">
+                        <span class="mega-icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                            <rect x="8" y="10" width="32" height="28" rx="6" ry="6" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <line x1="15" y1="18" x2="33" y2="18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            <line x1="15" y1="25" x2="27" y2="25" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span>
+                            <span class="mega-title">Outsourced Accounting</span>
+                            <span class="mega-sub">Your dedicated accounting team</span>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="mega-item">
+                        <a href="/services.html#payroll" class="mega-link">
+                        <span class="mega-icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                            <rect x="10" y="14" width="28" height="20" rx="4" ry="4" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <line x1="16" y1="22" x2="32" y2="22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            <line x1="16" y1="28" x2="24" y2="28" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span>
+                            <span class="mega-title">Payroll</span>
+                            <span class="mega-sub">Reliable, compliant, on time</span>
+                        </span>
+                        </a>
+                    </li>
+                    </ul>
+                </div>
 
-  <!-- Hero -->
+                <!-- Column 2 -->
+                <div>
+                    <p class="mega-label font-semibold tracking-[0.3em] text-neutral-500 uppercase mb-4">
+                    Tax
+                    </p>
+                    <ul class="space-y-2">
+                    <li class="mega-item">
+                        <a href="/tax-planning.html" class="mega-link">
+                        <span class="mega-icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                            <polyline points="10 30 18 22 26 26 38 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="38" cy="12" r="3" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span>
+                            <span class="mega-title">Tax Planning</span>
+                            <span class="mega-sub">Proactive strategies year-round</span>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="mega-item">
+                        <a href="/services.html#tax-compliance" class="mega-link">
+                        <span class="mega-icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M24 8l12 4v10c0 9-6 15-12 18-6-3-12-9-12-18V12z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                            <path d="M18 26l5 5 9-12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span>
+                            <span class="mega-title">Tax Compliance</span>
+                            <span class="mega-sub">Federal &amp; state filings</span>
+                        </span>
+                        </a>
+                    </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <p class="mega-label font-semibold tracking-[0.3em] text-neutral-500 uppercase mb-4">
+                    Advisory
+                    </p>
+                    <ul class="space-y-2">
+                    <li class="mega-item">
+                        <a href="/services.html#cfo" class="mega-link">
+                        <span class="mega-icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                            <circle cx="24" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <path d="M10 36c5-5 9-7 14-7s9 2 14 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span>
+                            <span class="mega-title">Fractional CFO</span>
+                            <span class="mega-sub">Clear decisions, faster</span>
+                        </span>
+                        </a>
+                    </li>
+                     <li class="mega-item">
+                        <a href="/business-setup-succession.html" class="mega-link">
+                        <span class="mega-icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M14 14h10l10 10-10 10H14V14z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                            <line x1="28" y1="24" x2="38" y2="24" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span>
+                            <span class="mega-title">Business Set-up & Succession</span>
+                            <span class="mega-sub">Plan a smooth transition</span>
+                        </span>
+                        </a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Simple links -->
+            <a href="/team.html" class="nav-link nav-link-text text-brand-black hover:text-brand-red">Team</a>
+            <a href="/contact.html" class="nav-link nav-link-text text-brand-black hover:text-brand-red hidden sm:inline">
+            Contact
+            </a>
+
+            <!-- CTAs -->
+            <div class="nav-cta-pair hidden md:flex items-center gap-2">
+            <a
+                href="https://martintaxadvisory.clientportal.com/#/login"
+                class="nav-cta-btn inline-flex items-center justify-center rounded-full border border-brand-black bg-white px-4 py-2 text-sm font-semibold text-brand-black transition hover:bg-brand-red hover:text-white"
+            >
+                Client Portal
+            </a>
+            <a
+                href="#contact"
+                class="nav-cta-btn inline-flex items-center justify-center rounded-full bg-brand-red px-4 py-2 text-sm font-semibold text-white shadow-lg hover:bg-brand-red/90"
+            >
+                Free Consultation
+            </a>
+            </div>
+        </nav>
+        </div>
+        <div class="mobile-nav-panel" data-mobile-panel>
+        <div class="mobile-nav-links">
+            <a href="#services">Services</a>
+            <a href="/team.html">Team</a>
+            <a href="#contact" class="mobile-cta">Free Consultation</a>
+        </div>
+        </div>
+    </header>
+
+  <!-- Contact Hero -->
   <section class="contact-hero">
-    <div class="wrap contact-hero__inner">
-      <h1>Let’s Talk</h1>
-      <p>Tell us about your business—tax, bookkeeping, payroll, or advisory. We’ll reach out with next steps.</p>
+    <div class="container-default contact-hero-inner section-inner">
+      <div class="reveal-on-scroll">
+        <span class="contact-kicker">Free Consultation</span>
+        <h1 class="contact-title">Talk To A Real Person Today!</h1>
+        <p class="contact-lede">
+          No fixed packages. No “one-size-fits-all” pricing.
+          We tailor your accounting, tax, and advisory support around what you actually need —
+          so you don’t overpay for services you won’t use.
+        </p>
+
+        <div class="contact-cta-row" id="consult">
+          <a class="btn-primary" href="tel:+14354651040" aria-label="Call Martin Tax & Advisory">
+            Call (435) 465-1040 <span aria-hidden="true">↗</span>
+          </a>
+          <a class="btn-secondary" href="mailto:tax@mta.cpa?subject=Free%20Consultation%20Request%20-%20MTA">
+            Email tax@mta.cpa <span aria-hidden="true">↗</span>
+          </a>
+          <a class="btn-secondary" href="https://martintaxadvisory.clientportal.com/#/login" target="_blank" rel="noreferrer">
+            Client Portal <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="contact-offer">
+          <div class="offer-card reveal-on-scroll">
+            <div class="offer-title">Free Consultation + Custom-Fit Pricing</div>
+            <div class="offer-sub">
+              We’ll learn your situation, identify quick wins, and outline next steps. If it’s a fit,
+              you get pricing designed around your needs.
+            </div>
+            <div class="offer-points">
+              <div class="offer-point"><span class="offer-dot"></span><span><strong>Clear plan</strong> over call, in-person meeting, or however you need.</span></div>
+              <div class="offer-point"><span class="offer-dot"></span><span><strong>Scope matched</strong> to your business stage</span></div>
+              <div class="offer-point"><span class="offer-dot"></span><span><strong>No overpaying</strong> for unused deliverables</span></div>
+            </div>
+          </div>
+
+      </div>
     </div>
   </section>
 
-  <!-- Contact Grid -->
-  <section class="contact-grid section">
-    <div class="wrap contact-grid__inner">
-      <!-- Form Card -->
-      <article class="contact-card contact-card--form">
-        <h2>Send Us a Message</h2>
-        <!-- Replace action with your Formspree/endpoint -->
-        <form class="contact-form" action="https://formspree.io/f/xqallwnl" method="POST">
-          <div class="form-row">
-            <label for="name">Full Name</label>
-            <input id="name" name="name" type="text" required placeholder="Jane Doe" />
+  <!-- Contact Info + Map -->
+  <section class="contact-grid">
+    <div class="container-default contact-grid-inner section-inner">
+      <div>
+        <div class="contact-card reveal-on-scroll">
+          <h2>Contact Information</h2>
+
+          <div class="contact-lines">
+            <div class="contact-line">
+              <div>
+                <div style="font-weight:900;">Phone</div>
+                <a href="tel:+14354651040">(435) 465-1040</a>
+              </div>
+              <button class="copy-btn" type="button" data-copy="(435) 465-1040">Copy</button>
+            </div>
+
+            <div class="contact-line">
+              <div>
+                <div style="font-weight:900;">Email</div>
+                <a href="mailto:tax@mta.cpa">tax@mta.cpa</a>
+              </div>
+              <button class="copy-btn" type="button" data-copy="tax@mta.cpa">Copy</button>
+            </div>
+
+            <div class="contact-line">
+              <div>
+                <div style="font-weight:900;">Address</div>
+                <div>2989 W Maple Loop Drive, Suite 130<br/>Lehi, UT 84043</div>
+              </div>
+              <button class="copy-btn" type="button" data-copy="2989 W Maple Loop Drive, Suite 130, Lehi, UT 84043">Copy</button>
+            </div>
           </div>
 
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required placeholder="you@company.com" />
+          <div class="contact-cta-row" style="margin-top: 1rem;">
+            <a class="btn-primary" href="#consult">Get a Free Consultation <span aria-hidden="true">↗</span></a>
+            <a class="btn-secondary" href="/#services">Browse Services <span aria-hidden="true">↗</span></a>
           </div>
-
-          <div class="form-row">
-            <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" />
-          </div>
-
-          <div class="form-row">
-            <label for="service">What do you need help with?</label>
-            <select id="service" name="service">
-              <option value="tax">Tax</option>
-              <option value="bookkeeping">Bookkeeping</option>
-              <option value="payroll">Payroll</option>
-              <option value="advisory">Advisory</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-
-          <div class="form-row">
-            <label for="message">Tell us a bit more</label>
-            <textarea id="message" name="message" rows="5" placeholder="Short description of your business needs…"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn--solid">Submit</button>
-          <p class="fineprint">By submitting, you agree to be contacted about services. We respect your privacy.</p>
-        </form>
-      </article>
-
-      <!-- Info Card -->
-      <aside class="contact-card contact-card--info">
-        <h2>Contact Details</h2>
-        <ul class="contact-list">
-          <li><strong>Email:</strong> <a href="mailto:tax@mta.cpa">tax@mta.cpa</a></li>
-          <li><strong>Phone:</strong> <a href="tel:+14354651040">(435) 465-1040</a></li>
-          <li><strong>Office:</strong>2901 W Bluegrass Blvd, Ste 200 Lehi, UT 84043</li>
-          <li><strong>Hours:</strong> Mon–Fri, 9:00 AM–5:00 PM</li>
-        </ul>
-
-        <div class="map-wrap">
-          <!-- Optional map embed (replace src with your map link or remove) -->
-          <iframe title="Office Location" width="100%" height="420" style="border:0;" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=2901%20W%20Bluegrass%20Blvd%20Ste%20200%20Lehi%20UT%2084043&amp;output=embed" spellcheck="false" aria-label="To enrich screen reader interactions, please activate Accessibility in Grammarly extension settings">
-          </iframe>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <!-- Footer -->
-    <footer class="site-footer">
-      <div class="wrap footer-inner footer-split">
-        <!-- Left: Contact row + Copyright -->
-        <div class="footer-left">
-          <div class="contact-row">
-            <a href="https://maps.app.goo.gl/" target="_blank" rel="noopener" class="chip">2901 W Bluegrass Blvd, Ste 200 Lehi, UT 84043</a>
-            <a href="tel:+18014651040" class="chip">(435)465-1040</a>
-          </div>
-          <p class="copy">© <span id="year"></span> Martin Tax & Advisory</p>
         </div>
 
-        <!-- Right: Social icons + FAQ button -->
-        <div class="footer-right" aria-label="Footer links">
-          <div class="socials-footer" aria-label="Social media">
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube" class="social">
-              <!-- YouTube -->
-              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-                <path fill="currentColor" d="M23.5 6.2a3.1 3.1 0 0 0-2.2-2.2C19.3 3.5 12 3.5 12 3.5s-7.3 0-9.3.5A3.1 3.1 0 0 0 .5 6.2 32.2 32.2 0 0 0 0 12a32.2 32.2 0 0 0 .5 5.8 3.1 3.1 0 0 0 2.2 2.2c2 .5 9.3.5 9.3.5s7.3 0 9.3-.5a3.1 3.1 0 0 0 2.2-2.2A32.2 32.2 0 0 0 24 12a32.2 32.2 0 0 0-.5-5.8zM9.8 15.5V8.5l6.2 3.5-6.2 3.5z"/>
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="social">
-              <!-- Instagram -->
-              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-                <path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm7-1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM12 2c3 0 3.4 0 4.6.1 1.2.1 2 .3 2.7.7.8.4 1.4 1 1.8 1.8.4.7.6 1.5.7 2.7.1 1.2.1 1.6.1 4.6s0 3.4-.1 4.6c-.1 1.2-.3 2-.7 2.7a4 4 0 0 1-1.8 1.8c-.7.4-1.5.6-2.7.7-1.2.1-1.6.1-4.6.1s-3.4 0-4.6-.1c-1.2-.1-2-.3-2.7-.7a4 4 0 0 1-1.8-1.8c-.4-.7-.6-1.5-.7-2.7C2 15.4 2 15 2 12s0-3.4.1-4.6c.1-1.2.3-2 .7-2.7A4 4 0 0 1 4.6 3c.7-.4 1.5-.6 2.7-.7C8.4 2.1 8.8 2 12 2z"/>
-              </svg>
-            </a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="social">
-              <!-- Facebook -->
-              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-                <path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/>
-              </svg>
-            </a>
-          </div>
-
-          <a class="btn btn--solid faq-btn" href="faq.html">FAQ</a>
+        <div class="contact-card reveal-on-scroll">
+          <h2>What happens in the free consultation?</h2>
+          <p style="margin-top:0.75rem; color: rgba(0,0,0,0.68); line-height:1.65;">
+            A casual, no-pressure conversation: where you are today, what’s painful, what’s urgent,
+            and what support would actually move the needle. Then we recommend a right-sized plan and pricing.
+          </p>
         </div>
       </div>
-    </footer>
 
-  <!-- Your existing JS (kept same path) -->
-    <!-- Your existing JS -->
-  <script src="/js/main.js" defer></script>
-  <script src="js/connecting-dots.js" defer></script>
+      <div class="map-card reveal-on-scroll" aria-label="Map to Martin Tax & Advisory office">
+        <iframe
+          src="https://www.google.com/maps?q=2989+W+Maple+Loop+Drive,+Suite+130,+Lehi,+UT+84043&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
 
+  <!-- Quick FAQ (accordion) -->
+  <section class="contact-faq">
+    <div class="container-default section-inner">
+      <div class="reveal-on-scroll">
+        <p class="services-eyebrow">Quick answers</p>
+        <h2 class="services-title">FAQ</h2>
+        <p class="services-subtitle">
+          Keep it simple. If you’d rather not read — just call. We’ll take it from there.
+        </p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item reveal-on-scroll" data-open="false">
+          <button class="faq-btn" type="button">
+            <span>Do you offer fixed pricing?</span><span aria-hidden="true">＋</span>
+          </button>
+          <div class="faq-panel">
+            <div class="faq-panel-inner">
+              No — one size fits all, usually... Doesn't fit all. We tailor your pricing around the services you actually need.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal-on-scroll" data-open="false">
+          <button class="faq-btn" type="button">
+            <span>What should I bring to the consultation?</span><span aria-hidden="true">＋</span>
+          </button>
+          <div class="faq-panel">
+            <div class="faq-panel-inner">
+              Nothing required. If you have recent financials, tax returns, or payroll summaries — great. If not, we’ll guide you.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal-on-scroll" data-open="false">
+          <button class="faq-btn" type="button">
+            <span>How quickly can we get started?</span><span aria-hidden="true">＋</span>
+          </button>
+          <div class="faq-panel">
+            <div class="faq-panel-inner">
+              Often immediately. We’ll map the fastest “first wins” and a clean onboarding path based on your systems.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal-on-scroll" data-open="false">
+          <button class="faq-btn" type="button">
+            <span>Are you only in Utah?</span><span aria-hidden="true">＋</span>
+          </button>
+          <div class="faq-panel">
+            <div class="faq-panel-inner">
+              We serve businesses and individuals across the United States — remote-friendly and responsive.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-cta-row reveal-on-scroll" style="justify-content:center; margin-top: 1.75rem;">
+        <a class="btn-primary" href="tel:+14354651040">Call for a Free Consultation <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (reuse yours) -->
+  <footer class="site-footer">
+    <div class="container-default footer-grid footer-flex">
+      <div class="footer-brand">
+        <a href="/" class="flex items-center gap-3 text-white">
+          <img src="/images/mtalogo.png" alt="Martin Tax & Advisory" class="h-10 w-auto">
+          <span class="font-semibold tracking-wide">Martin Tax &amp; Advisory</span>
+        </a>
+        <p class="mt-4 text-sm text-white/70 max-w-sm">
+          Tax, accounting, and advisory guidance for growing businesses across the United States.
+        </p>
+      </div>
+
+      <div class="footer-contact">
+        <p class="footer-heading">Contact</p>
+        <ul class="footer-list">
+          <li>2989 W Maple Loop Drive, Suite 130<br>Lehi, UT 84043</li>
+          <li><a href="tel:+14354651040">(435) 465-1040</a></li>
+          <li><a href="mailto:tax@mta.cpa">tax@mta.cpa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps?q=2989+W+Maple+Loop+Drive,+Suite+130,+Lehi,+UT+84043&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <div class="footer-resources">
+        <p class="footer-heading">Resources</p>
+        <ul class="footer-list">
+          <li><a href="/#services">Services Overview</a></li>
+          <li><a href="/team.html">Meet The Team</a></li>
+          <li><a href="https://martintaxadvisory.clientportal.com/#/login" target="_blank" rel="noreferrer">Client Portal</a></li>
+          <li><a href="contact.html">Schedule a Consultation</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Martin Tax &amp; Advisory. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="text/javascript" src="https://app.calldrip.com/js/widget.js#$2y$10$Ex/Enb2UQlh24JgPPSO1POyXALbREyC0SrPh0FU5E/KjStDttLNAy" data-account-key="$2y$10$PHe9CeN5u2GV9Klnc88PE.GMDCUXDHBaYupmTMrVFoFJ/oDpbK1Be"></script>
 </body>
 </html>

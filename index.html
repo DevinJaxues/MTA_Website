@@ -1,202 +1,575 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Martin Tax & Advisory</title>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="MTA CPAs is a full-service accounting firm providing tax planning, compliance, business advisory, and CFO services tailored to individuals and businesses. 35+ years of experience in taxes, CFO, bookkeeping, payroll and more.">
-  <!-- Fonts and CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>Martin Tax & Advisory</title>
+  <link rel="stylesheet" href="/css/styles.css"/>
 </head>
-<!-- THIS CODE IS PROPERTY OF DEVIN J. MONSEN. ANY UNCONSENTED REDISTRIBUTION OR USE OF THIS CODE IS UNLAWFUL UNDER COPYRIGHT LAW -->
-<body class="mta-site">
-  <canvas class="connecting-dots"></canvas>
+<body class="font-sans antialiased text-neutral-900">
+
   <!-- Header -->
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <div class="brand-group">
-    <a class="brand mta" href="https://devinjaxues.github.io/MTA_Website/index.html">
-      <img src="images/MTA-Logo-v4-Extended-1.png" alt="Martin Tax & Advisory logo" loading="lazy"/>
-    </a>
-    <a class="brand accsub" href="https://accountingsubs.com" target="_blank" rel="noopener">
-      <img src="images/acc subs.png" alt="Accounting Subcontractors logo" />
-    </a>
-    </div>
+  <header class="site-header z-50 bg-white/85 backdrop-blur border-b border-black/5">
+    <div class="header-bar flex h-[84px] md:h-[96px] items-center justify-between px-4 md:px-10 lg:px-14">
 
-      <nav class="main-nav" aria-label="Primary">
-        <button class="hamburger" aria-expanded="false" aria-controls="mobileMenu">
-          <span></span><span></span><span></span>
-          <span class="sr-only">Menu</span>
-        </button>
+      <!-- Left: Logo -->
+      <div class="header-brand-links flex items-center gap-4">
+        <a href="/" class="brand-link-icon" aria-label="Visit Martin Tax & Advisory">
+          <img
+            src="/images/mtalogo.png"
+            alt="Martin Tax & Advisory"
+            class="h-9 md:h-11 w-auto"
+          />
+        </a>
+        <a href="https://accsubs.com" target="_blank" rel="noreferrer" class="brand-link-icon" aria-label="Visit ACC Subsidiary">
+          <img src="/images/acc subs.png" alt="ACC Subsidiary" class="h-10 md:h-12 w-auto">
+        </a>
+      </div>
 
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">Meet The Team</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a class="btn btn--solid" href="https://martintaxadvisory.clientportal.com/#/login">Client Portal</a></li>
-        </ul>
+      <button
+        class="mobile-nav-toggle lg:hidden"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        data-mobile-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Right: Nav -->
+      <nav class="nav-main hidden lg:flex items-center gap-5 md:gap-8 text-lg font-semibold">
+        <!-- Services + mega menu -->
+        <div class="relative nav-dropdown" data-mega>
+          <button
+            type="button"
+            class="nav-link nav-link-text nav-link-trigger inline-flex items-center gap-2 text-brand-black hover:text-brand-red"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="services-menu"
+            data-mega-trigger
+          >
+            Services
+            <span class="nav-link-indicator" aria-hidden="true">▾</span>
+          </button>
+
+          <!-- Mega menu -->
+          <div
+            id="services-menu"
+            class="mega-menu absolute left-1/2 top-full z-40 mt-7 rounded-3xl bg-white shadow-2xl ring-1 ring-black/5"
+            data-mega-panel
+          >
+            <div class="grid grid-cols-3 gap-8 text-left">
+              <!-- Column 1 -->
+              <div>
+                <p class="mega-label font-semibold tracking-[0.3em] text-neutral-500 uppercase mb-4">
+                  Accounting
+                </p>
+                <ul class="space-y-2">
+                  <li class="mega-item">
+                    <a href="outsourced-accounting.html" class="mega-link">
+                      <span class="mega-icon">
+                        <svg viewBox="0 0 48 48" aria-hidden="true">
+                          <rect x="8" y="10" width="32" height="28" rx="6" ry="6" fill="none" stroke="currentColor" stroke-width="3"/>
+                          <line x1="15" y1="18" x2="33" y2="18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                          <line x1="15" y1="25" x2="27" y2="25" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                      </span>
+                      <span>
+                        <span class="mega-title">Outsourced Accounting</span>
+                        <span class="mega-sub">Your dedicated accounting team</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="mega-item">
+                    <a href="/payroll.html" class="mega-link">
+                      <span class="mega-icon">
+                        <svg viewBox="0 0 48 48" aria-hidden="true">
+                          <rect x="10" y="14" width="28" height="20" rx="4" ry="4" fill="none" stroke="currentColor" stroke-width="3"/>
+                          <line x1="16" y1="22" x2="32" y2="22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                          <line x1="16" y1="28" x2="24" y2="28" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                      </span>
+                      <span>
+                        <span class="mega-title">Payroll</span>
+                        <span class="mega-sub">Reliable, compliant, on time</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Column 2 -->
+              <div>
+                <p class="mega-label font-semibold tracking-[0.3em] text-neutral-500 uppercase mb-4">
+                  Tax
+                </p>
+                <ul class="space-y-2">
+                  <li class="mega-item">
+                    <a href="/tax-planning.html" class="mega-link">
+                      <span class="mega-icon">
+                        <svg viewBox="0 0 48 48" aria-hidden="true">
+                          <polyline points="10 30 18 22 26 26 38 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                          <circle cx="38" cy="12" r="3" fill="currentColor"/>
+                        </svg>
+                      </span>
+                      <span>
+                        <span class="mega-title">Tax Planning</span>
+                        <span class="mega-sub">Proactive strategies year-round</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="mega-item">
+                    <a href="/tax-compliance.html" class="mega-link">
+                      <span class="mega-icon">
+                        <svg viewBox="0 0 48 48" aria-hidden="true">
+                          <path d="M24 8l12 4v10c0 9-6 15-12 18-6-3-12-9-12-18V12z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                          <path d="M18 26l5 5 9-12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span>
+                        <span class="mega-title">Tax Compliance</span>
+                        <span class="mega-sub">Federal &amp; state filings</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Column 3 -->
+              <div>
+                <p class="mega-label font-semibold tracking-[0.3em] text-neutral-500 uppercase mb-4">
+                  Advisory
+                </p>
+                <ul class="space-y-2">
+                  <li class="mega-item">
+                    <a href="/fractional-cfo.html" class="mega-link">
+                      <span class="mega-icon">
+                        <svg viewBox="0 0 48 48" aria-hidden="true">
+                          <circle cx="24" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="3"/>
+                          <path d="M10 36c5-5 9-7 14-7s9 2 14 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                      </span>
+                      <span>
+                        <span class="mega-title">Fractional CFO</span>
+                        <span class="mega-sub">Clear decisions, faster</span>
+                      </span>
+                    </a>
+                  </li>
+                   <li class="mega-item">
+                        <a href="/business-setup-succession.html" class="mega-link">
+                        <span class="mega-icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M14 14h10l10 10-10 10H14V14z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                            <line x1="28" y1="24" x2="38" y2="24" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span>
+                            <span class="mega-title">Business Set-up & Succession</span>
+                            <span class="mega-sub">Plan a smooth transition</span>
+                        </span>
+                        </a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simple links -->
+        <a href="/team.html" class="nav-link nav-link-text text-brand-black hover:text-brand-red">Team</a>
+        <a href="/contact.html" class="nav-link nav-link-text text-brand-black hover:text-brand-red hidden sm:inline">
+          Contact
+        </a>
+
+        <!-- CTAs -->
+        <div class="nav-cta-pair hidden md:flex items-center gap-2">
+          <a
+            href="https://martintaxadvisory.clientportal.com/#/login"
+            class="nav-cta-btn inline-flex items-center justify-center rounded-full border border-brand-black bg-white px-4 py-2 text-sm font-semibold text-brand-black transition hover:bg-brand-red hover:text-white"
+          >
+            Client Portal
+          </a>
+          <a
+            href="#contact"
+            class="nav-cta-btn inline-flex items-center justify-center rounded-full bg-brand-red px-4 py-2 text-sm font-semibold text-white shadow-lg hover:bg-brand-red/90"
+          >
+            Free Consultation
+          </a>
+        </div>
       </nav>
     </div>
-
-    <!-- Mobile drawer -->
-    <nav id="mobileMenu" class="mobile-drawer" aria-label="Mobile">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">Meet The Team</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="client-portal.html">Client Portal</a></li>
-      </ul>
-    </nav>
+    <div class="mobile-nav-panel" data-mobile-panel>
+      <div class="mobile-nav-links">
+        <a href="#services">Services</a>
+        <a href="/team.html">Team</a>
+        <a href="#contact" class="mobile-cta">Free Consultation</a>
+      </div>
+    </div>
   </header>
 
-    <!-- Hero Section -->
-  <section class="hero hero--team home-hero">
-      <div class="hero-images">
-        <img src="images/brobroandbra.webp" alt="Team working together" loading="lazy">
-        <img src="images/team.webp" alt="Office collaboration" loading="lazy">
-        <img src="images/troyandbrady.webp" alt="Business strategy" loading="lazy">
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="hero-text">
-        <h1>Trusted Tax Advisors. Lasting Relationships. Real Results.</h1>
-      <p>We specialize in strategic tax planning, proactive business advisory, and financial solutions designed to help entrepreneurs and business owners build lasting success.</p>
-      <div class="hero-ctas">
-        <a href="services.html" class="btn btn--solid">Explore Services</a>
-        <a href="https://martintaxadvisory.clientportal.com/#/login" class="btn btn--outline">Client Portal</a>
-      </div>
-    </section>
-  </section>
+  <!-- HERO -->
+  <section
+    id="hero"
+    class="hero-section relative min-h-screen overflow-hidden flex items-center justify-center text-center"
+  >
+    <!-- BACKGROUND IMAGE -->
+    <div class="hero-bg-strip single-hero">
+      <img src="/images/teamalt.webp" alt="MTA team background" />
+    </div>
 
-  <!-- Logo Marquee -->
-  <section class="marquee-section">
-    <h2 class="marquee-title">Trusted By</h2>
-    <div class="marquee-fade">
-      <div class="marquee-track" id="marqueeTrack">
-        <img src="images/cvm.png" alt="Logo" loading="lazy"/>
-        <img src="images/hkp.webp" alt="Logo" loading="lazy"/>
-        <img src="images/cnc.webp" alt="Logo" loading="lazy"/>
-        <img src="images/PG.webp" alt="Logo" loading="lazy"/>
-        <img src="images/SM.webp" alt="Logo" loading="lazy"/>
-        <img src="images/WTT.webp" alt="Logo" loading="lazy"/>
+    <!-- BIG HEADLINE BEHIND THE PEOPLE -->
+    <h1 class="hero-headline" aria-label="Martin Tax and Advisory">
+    <span class="hero-headline-line">MARTIN TAX &amp;</span>
+    <span class="hero-headline-line">ADVISORY</span>
+    </h1>
+
+    <!-- FOREGROUND CUTOUT (PEOPLE) -->
+    <div class="hero-foreground pointer-events-none">
+      <img src="/images/teamalt-fg.png" alt="Martin Tax & Advisory team foreground" />
+    </div>
+
+    <!-- OVERLAY + TOP TEXT (ON TOP OF EVERYTHING) -->
+    <div class="hero-overlay-top"></div>
+
+    <div class="relative z-40 w-full px-4 md:px-10 lg:px-14">
+      <div class="hero-copy mx-auto max-w-4xl">
+        <p class="hero-eyebrow text-sm md:text-base font-semibold tracking-[0.4em] text-white/80 uppercase mb-6">
+          Tax, Accounting &amp; Advisory
+        </p>
+        <p class="hero-subline mt-6 text-lg md:text-2xl text-white/85 leading-snug">
+          Trusted Tax Advisors. Lasting Relationships. Real Results.
+        </p>
       </div>
     </div>
   </section>
 
-    <!-- CPA Services Cards -->
-    <section class="services-section">
-    <div class="wrap">
-      <h2>What We Do</h2>
+  <!-- Services Sections -->
+  <!-- SERVICES -->
+  <section id="services" class="services-section">
+    <div class="container-default section-inner">
+      <header class="services-header">
+        <p class="services-eyebrow">What we do</p>
+        <h2 class="services-title">
+          A Full Back-Office Financial Team<br />
+          For Your Business.
+        </h2>
+        <p class="services-subtitle">
+          From bookkeeping to big-picture strategy, we plug into your business as your
+          finance department — not just a tax filer.
+        </p>
+      </header>
+
       <div class="services-grid">
+        <!-- Card 1 -->
+        <article class="service-card">
+          <div class="service-card-inner">
+            <div class="service-card-top">
+              <div class="service-icon service-logo">
+                <img src="/images/serv1.webp" alt="Outsourced Accounting" />
+              </div>
+              <span class="service-index">01</span>
+            </div>
 
-        <!-- Tax Compliance -->
-        <div class="service-card">
-          <img src="images/tax-comliance-b.png" alt="Tax Compliance Icon" loading="lazy">
-          <h3>Tax Compliance</h3>
-          <p>Our tax compliance services ensure your business or personal finances are always in full alignment with federal, state, and local regulations. We provide comprehensive preparation and filing for income taxes, sales taxes, and payroll taxes. By identifying potential liabilities early and staying ahead of regulatory changes, we help you reduce audit risks and avoid costly penalties. Our proactive approach streamlines your compliance processes, so you can stay focused on growth with peace of mind.</p>
-        </div>
+            <h3 class="service-title">Outsourced Accounting</h3>
+            <p class="service-body">
+              Clean, consistent monthly books and reports you can actually read — so you
+              always know where the money is going.
+            </p>
 
-        <!-- Tax Planning -->
-        <div class="service-card">
-          <img src="images/tax-planning-b.png" alt="Tax Planning Icon" loading="lazy">
-          <h3>Tax Planning</h3>
-          <p>Tax planning is a critical component of financial success. We work closely with individuals, families, and businesses to develop year-round strategies that minimize tax liabilities while supporting your financial goals. From investment structuring and charitable giving to retirement planning and entity optimization, our team creates customized plans that adapt with your evolving needs. Effective planning means you don’t just react to tax events — you stay ahead of them.</p>
-        </div>
+            <a href="outsourced-accounting.html" class="service-cta">
+              <span>Learn more</span>
+              <span class="service-cta-arrow">↗</span>
+            </a>
+          </div>
+        </article>
 
-        <!-- Business Structure & New Business Set-Up -->
-        <div class="service-card">
-          <img src="images/business-structure-new-business-set-up-b.png" alt="Business Structure Icon" loading="lazy">
-          <h3>Business Structure & New Business Set-Up</h3>
-          <p>Starting a business is exciting — and the right foundation is critical. We help entrepreneurs and startups choose the most advantageous legal structure, whether it's an LLC, S Corp, C Corp, or partnership. Our team handles state and IRS registrations, helps develop an accounting system, and advises on tax implications from day one. With our guidance, your new business can launch efficiently, avoid early mistakes, and be structured for sustainable success and compliance.</p>
-        </div>
+        <!-- Card 2 -->
+        <article class="service-card">
+          <div class="service-card-inner">
+            <div class="service-card-top">
+              <div class="service-icon service-logo">
+                <img src="/images/serv2.webp" alt="Tax Planning" />
+              </div>
+              <span class="service-index">02</span>
+            </div>
 
-        <!-- Business Succession Planning -->
-        <div class="service-card">
-          <img src="images/business-succession-planning-b.png" alt="Succession Planning Icon" loading="lazy">
-          <h3>Business Succession Planning</h3>
-          <p>Preparing for the future of your business means building a strong succession plan today. Whether you're planning for retirement, a leadership transition, or unexpected events, we guide you through strategies to preserve value, maintain operations, and ensure a smooth transfer of ownership. Our approach includes valuation analysis, tax-efficient transfer structures, and alignment with your long-term personal and business goals. We help you leave a legacy — not uncertainty.</p>
-        </div>
+            <h3 class="service-title">Tax Planning</h3>
+            <p class="service-body">
+              Year-round strategies to minimize tax and maximize cash — not just a
+              once-a-year surprise in April.
+            </p>
 
-        <!-- CFO/CEO Consulting and Support -->
-        <div class="service-card">
-          <img src="images/cfo-ceo-consulting-and-support-b.png" alt="CFO Consulting Icon" loading="lazy">
-          <h3>CFO/CEO Consulting and Support</h3>
-          <p>Executives need more than reports — they need insights. Our CFO and CEO consulting services provide high-level strategic support tailored to your industry and stage of growth. We assist with budgeting, forecasting, cash flow management, and long-term financial planning. Whether acting as a fractional CFO or supporting an internal leadership team, our expertise helps drive profitability, streamline operations, and inform executive decisions with clarity and confidence.</p>
-        </div>
+            <a href="services.html#tax-planning" class="service-cta">
+              <span>Learn more</span>
+              <span class="service-cta-arrow">↗</span>
+            </a>
+          </div>
+        </article>
 
-        <!-- QuickBooks Setup and Consulting -->
-        <div class="service-card">
-          <img src="images/quickbooks-setup-and-consulting-b.png" alt="QuickBooks Icon" loading="lazy">
-          <h3>QuickBooks Setup and Consulting</h3>
-          <p>QuickBooks is a powerful tool — but only when configured properly. We help businesses set up QuickBooks for optimal performance, ensuring your chart of accounts, invoicing, expense tracking, and reporting are all aligned with your operations. Our consulting services cover ongoing troubleshooting, custom reporting, and staff training. Whether you're new to QuickBooks or need a cleanup, we make sure your system works for you, not the other way around.</p>
-        </div>
+        <!-- Card 3 -->
+        <article class="service-card">
+          <div class="service-card-inner">
+            <div class="service-card-top">
+              <div class="service-icon service-logo">
+                <img src="/images/serv3.webp" alt="Payroll &amp; Payroll Taxes" />
+              </div>
+              <span class="service-index">03</span>
+            </div>
 
-        <!-- Bookkeeping and Payroll Services -->
-        <div class="service-card">
-          <img src="images/quickbooks-setup-and-consulting-b.png" alt="Bookkeeping Icon" loading="lazy">
-          <h3>Bookkeeping and Payroll Services</h3>
-          <p>Accurate bookkeeping and timely payroll are the backbone of business operations. Our team provides full-service bookkeeping, including account reconciliation, financial statement preparation, and cash flow tracking. We also handle payroll processing, direct deposits, tax filings, and year-end reporting. With our support, you’ll gain reliable financial data, meet all deadlines, and stay compliant — freeing up your time to focus on growing your business.</p>
-        </div>
+            <h3 class="service-title">Payroll &amp; Payroll Taxes</h3>
+            <p class="service-body">
+              Reliable, compliant payroll and filings so payday is never a fire drill and
+              your team is always taken care of.
+            </p>
 
+            <a href="services.html#payroll" class="service-cta">
+              <span>Learn more</span>
+              <span class="service-cta-arrow">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="service-card">
+          <div class="service-card-inner">
+            <div class="service-card-top">
+              <div class="service-icon service-logo">
+                <img src="/images/serv4.webp" alt="Fractional CFO Support" />
+              </div>
+              <span class="service-index">04</span>
+            </div>
+
+            <h3 class="service-title">Fractional CFO Support</h3>
+            <p class="service-body">
+              Budgeting, forecasting, and cash strategy for owners who want clarity and a
+              sounding board for big decisions.
+            </p>
+
+            <a href="services.html#fractional-cfo" class="service-cta">
+              <span>Learn more</span>
+              <span class="service-cta-arrow">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="service-card">
+          <div class="service-card-inner">
+            <div class="service-card-top">
+              <div class="service-icon service-logo">
+                <img src="/images/serv5.webp" alt="Tax Compliance" />
+              </div>
+              <span class="service-index">05</span>
+            </div>
+
+            <h3 class="service-title">Tax Compliance</h3>
+            <p class="service-body">
+              Federal &amp; state filings done right and on time — without surprises or
+              “we need to talk” letters from the IRS.
+            </p>
+
+            <a href="services.html#tax-compliance" class="service-cta">
+              <span>Learn more</span>
+              <span class="service-cta-arrow">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="service-card">
+          <div class="service-card-inner">
+            <div class="service-card-top">
+              <div class="service-icon service-logo">
+                <img src="/images/serv6.webp" alt="Business Succession &amp; Exits" />
+              </div>
+              <span class="service-index">06</span>
+            </div>
+
+            <h3 class="service-title">Business Succession &amp; Exits</h3>
+            <p class="service-body">
+              Plan a smooth transition, sale, or succession on your terms — with a clear
+              picture of taxes and cash.
+            </p>
+
+            <a href="services.html#succession" class="service-cta">
+              <span>Learn more</span>
+              <span class="service-cta-arrow">↗</span>
+            </a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section section--alt">
-    <div class="wrap">
-      <h2>Let’s Get Your Back-Office Dialed</h2>
-      <p>Tell us where you’re headed and we’ll help you get there.</p>
-      <a class="btn btn--solid" href="contact.html">Free Consultation</a>
+
+    <!-- TEAM -->
+  <section
+    id="team"
+    class="team-section excel-grid-section relative min-h-[95vh] flex items-center py-24"
+  >
+    <div class="container-default team-grid">
+
+      <!-- Copy -->
+      <div class="team-copy">
+        <p class="text-sm md:text-base font-semibold tracking-[0.35em] text-neutral-500 uppercase">
+          The MTA team
+        </p>
+        <h2 class="mt-5 text-4xl md:text-5xl lg:text-[3.8rem] font-black text-brand-black leading-tight">
+          30+ Years of Real-World Tax and Accounting Experience.
+        </h2>
+        <p class="mt-7 text-lg md:text-xl lg:text-2xl text-neutral-700 max-w-2xl">
+          We’re a family-built firm serving businesses and individuals across the United States. When you call, you get a human who knows your story.
+        </p>
+        <div class="mt-12 flex flex-wrap justify-start gap-4">
+          <a href="/team.html" class="service-cta">
+            <span>Meet the team</span>
+            <span class="service-cta-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Photo stack -->
+      <div class="team-photo-wall">
+        <!-- main large photo -->
+        <div class="team-photo-stack main-photo float-slow">
+          <img
+            src="/images/team.webp"
+            alt="Martin Tax & Advisory team"
+            class="h-full w-full object-cover"
+          />
+        </div>
+
+        <!-- top-right smaller -->
+        <div class="team-photo-stack small float-slow-delay">
+          <img
+            src="/images/troyandbrady.webp"
+            alt="Founders"
+            class="h-full w-full object-cover"
+          />
+        </div>
+
+        <!-- bottom-left smaller -->
+        <div class="team-photo-stack small float-slow-alt">
+          <img
+            src="/images/brobroandbra.webp"
+            alt="Family in the mountains"
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <section class="home-consult" id="home-consult">
+    <div class="container-default grid lg:grid-cols-[1.1fr,1fr] gap-10 lg:gap-16 items-center">
+      <div class="space-y-5 reveal-on-scroll">
+        <p class="eyebrow text-brand-brown">Free Consultation</p>
+        <h2 class="text-[2.9rem] md:text-[3.8rem] font-semibold">Let's Start A Conversation.</h2>
+        <p class="text-brand-brown leading-relaxed">Tell us a little about your business and we'll reach out with a custom Loom video or call outlining how MTA can plug in — including a pricing range.</p>
+        <ul class="space-y-2 text-sm text-brand-black/85">
+          <li>15–20 minute conversation, no hard sell or fees.</li>
+          <li>Tell us your story and goals</li>
+          <li>You walk away with clear next steps - even if we're not the right fit.</li>
+        </ul>
+      </div>
+
+      <form action="https://formspree.io/f/xgvgggjr" method="POST" class="card p-6 md:p-7 space-y-4 reveal-on-scroll">
+        <div class="space-y-1">
+          <label class="text-sm font-medium">Name</label>
+          <input type="text" name="name" class="w-full rounded-xl border border-black/10 px-3 py-2 text-sm" required />
+        </div>
+        <div class="space-y-1">
+          <label class="text-sm font-medium">Email</label>
+          <input type="email" name="email" class="w-full rounded-xl border border-black/10 px-3 py-2 text-sm" required />
+        </div>
+        <div class="space-y-1">
+          <label class="text-sm font-medium">Business name</label>
+          <input type="text" name="business" class="w-full rounded-xl border border-black/10 px-3 py-2 text-sm" />
+        </div>
+        <div class="space-y-1">
+          <label class="text-sm font-medium">What can we help with?</label>
+          <textarea rows="3" name="message" class="w-full rounded-xl border border-black/10 px-3 py-2 text-sm" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-lg btn-solid w-full oa-form-submit">Start my free consultation</button>
+        <p class="text-[0.7rem] text-brand-brown text-center">No spam. Your information will not be sold. This form is strictly for free consultations.</p>
+      </form>
+    </div>
+  </section>
+
   <footer class="site-footer">
-    <div class="wrap footer-inner footer-split">
-      <!-- Left: Contact row + Copyright -->
-      <div class="footer-left">
-        <div class="contact-row">
-          <a href="https://maps.app.goo.gl/" target="_blank" rel="noopener" class="chip">2901 W Bluegrass Blvd, Ste 200 Lehi, UT 84043</a>
-          <a href="tel:+18014651040" class="chip">(435)465-1040</a>
-        </div>
-        <p class="copy">© <span id="year"></span> Martin Tax & Advisory</p>
-      </div>
-
-      <!-- Right: Social icons + FAQ button -->
-      <div class="footer-right" aria-label="Footer links">
-        <div class="socials-footer" aria-label="Social media">
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube" class="social">
-            <!-- YouTube -->
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <path fill="currentColor" d="M23.5 6.2a3.1 3.1 0 0 0-2.2-2.2C19.3 3.5 12 3.5 12 3.5s-7.3 0-9.3.5A3.1 3.1 0 0 0 .5 6.2 32.2 32.2 0 0 0 0 12a32.2 32.2 0 0 0 .5 5.8 3.1 3.1 0 0 0 2.2 2.2c2 .5 9.3.5 9.3.5s7.3 0 9.3-.5a3.1 3.1 0 0 0 2.2-2.2A32.2 32.2 0 0 0 24 12a32.2 32.2 0 0 0-.5-5.8zM9.8 15.5V8.5l6.2 3.5-6.2 3.5z"/>
-            </svg>
+    <div class="container-default footer-grid footer-flex">
+      <div class="footer-brand">
+        <a href="/" class="flex items-center gap-3 text-white">
+          <img src="/images/mtalogo.png" alt="Martin Tax & Advisory" class="h-10 w-auto">
+          <span class="font-semibold tracking-wide">Martin Tax &amp; Advisory</span>
+        </a>
+        <p class="mt-4 text-sm text-white/70 max-w-sm">
+          Tax, accounting, and advisory guidance for growing businesses across the United States.
+        </p>
+        <div class="footer-social mt-5 flex gap-3">
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 9H2.2v12h3V9Zm-1.5-4a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5Zm6 4h-3v12h3v-6.4c0-2 2.6-2.1 2.6 0V21h3v-6.9c0-4.5-5-4.3-5.6-2.1V9Z" fill="currentColor"/></svg>
           </a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="social">
-            <!-- Instagram -->
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm7-1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM12 2c3 0 3.4 0 4.6.1 1.2.1 2 .3 2.7.7.8.4 1.4 1 1.8 1.8.4.7.6 1.5.7 2.7.1 1.2.1 1.6.1 4.6s0 3.4-.1 4.6c-.1 1.2-.3 2-.7 2.7a4 4 0 0 1-1.8 1.8c-.7.4-1.5.6-2.7.7-1.2.1-1.6.1-4.6.1s-3.4 0-4.6-.1c-1.2-.1-2-.3-2.7-.7a4 4 0 0 1-1.8-1.8c-.4-.7-.6-1.5-.7-2.7C2 15.4 2 15 2 12s0-3.4.1-4.6c.1-1.2.3-2 .7-2.7A4 4 0 0 1 4.6 3c.7-.4 1.5-.6 2.7-.7C8.4 2.1 8.8 2 12 2z"/>
-            </svg>
+          <a href="https://www.instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2C4.7 2 2 4.7 2 8v8c0 3.3 2.7 6 6 6h8c3.3 0 6-2.7 6-6V8c0-3.3-2.7-6-6-6H8zm0 2h8c2.2 0 4 1.8 4 4v8c0 2.2-1.8 4-4 4H8c-2.2 0-4-1.8-4-4V8c0-2.2 1.8-4 4-4zm8.8 1.8a1 1 0 0 0-1 1c0 .55.45 1 1 1s1-.45 1-1-.45-1-1-1zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" fill="currentColor"/></svg>
           </a>
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="social">
-            <!-- Facebook -->
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/>
-            </svg>
+          <a href="https://www.facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 9V7c0-.6.4-1 1-1h2V3h-2.5C10.8 3 9 4.5 9 6.9V9H6v3h3v9h3v-9h3l1-3h-4z" fill="currentColor"/></svg>
           </a>
         </div>
-
-        <a class="btn btn--solid faq-btn" href="faq.html">FAQ</a>
       </div>
+
+      <div class="footer-contact">
+        <p class="footer-heading">Contact</p>
+        <ul class="footer-list">
+          <li>2989 W Maple Loop Drive, Suite 130<br>Lehi, UT 84043</li>
+          <li><a href="tel:+18014651040">(435) 465-1040</a></li>
+          <li><a href="mailto:tax@mta.cpa">tax@mta.cpa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps?q=2901+Bluegrass+Blvd+Suite+200-58,+Lehi,+UT+84043&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <div class="footer-resources">
+        <p class="footer-heading">Resources</p>
+        <ul class="footer-list">
+          <li><a href="#services">Services Overview</a></li>
+          <li><a href="/team.html">Meet The Team</a></li>
+          <li><a href="https://martintaxadvisory.clientportal.com/#/login" target="_blank" rel="noreferrer">Client Portal</a></li>
+          <li><a href="/contact.html">Schedule a Consultation</a></li>
+        </ul>
+      </div>
+      <div class="footer-cta-wrap">
+        <button class="footer-cta ml-onclick-form" onclick="ml('show', 'yWmN4p', true)">
+          Subscribe For Updates
+        </button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Martin Tax &amp; Advisory. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- App JS (path corrected to your current file layout) -->
-  <script src="js/connecting-dots.js"></script>
-  <script src="js/main.js" defer></script>
+
+  <!-- MAIN JS -->
+  <script type="module" src="/js/main.js"></script>
+  <!-- MailerLite Universal -->
+  <script>
+      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+      .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+      n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+      (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account', '1916588');
+  </script>
+  <!-- End MailerLite Universal -->
+   <script type="text/javascript" src="https://app.calldrip.com/js/widget.js#$2y$10$Ex/Enb2UQlh24JgPPSO1POyXALbREyC0SrPh0FU5E/KjStDttLNAy" data-account-key="$2y$10$PHe9CeN5u2GV9Klnc88PE.GMDCUXDHBaYupmTMrVFoFJ/oDpbK1Be"></script>
 </body>
 </html>
