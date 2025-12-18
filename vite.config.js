@@ -3,7 +3,7 @@ import { resolve } from "path";
 
 export default defineConfig({
   // IMPORTANT: repo name because you're deploying to /MTA_Website/
-  base: "/MTA_Website/",
+  base: "/MTA_Webpage_v2/",
 
   build: {
     rollupOptions: {
@@ -17,8 +17,7 @@ export default defineConfig({
         payroll: resolve(__dirname, "payroll.html"),
         fractionalCfo: resolve(__dirname, "fractional-cfo.html"),
         businessSetupSuccession: resolve(__dirname, "business-setup-succession.html"),
-        // If you add one:
-        // notFound: resolve(__dirname, "404.html"),
+        notFound: resolve(__dirname, "404.html"),
       },
     },
   },
